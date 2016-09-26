@@ -1,4 +1,5 @@
 @font-face {
     font-family: GameFont;
-    src: url("mplus-1m-regular.ttf");
+	src: 	url('mplus-1m-regular.woff2') 	format('woff'),
+			url('mplus-1m-regular.ttf') 	format('truetype');
 }
