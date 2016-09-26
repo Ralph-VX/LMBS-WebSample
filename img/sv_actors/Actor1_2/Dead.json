@@ -1,0 +1,46 @@
+{
+	"frameCount": 4,
+	"frames": [
+		{
+			"height": 38,
+			"hideWeapon": false,
+			"weaponAngle": 0,
+			"weaponBack": false,
+			"weaponMirror": false,
+			"weaponX": 0,
+			"weaponY": 0,
+			"width": 64
+		},
+		{
+			"height": 38,
+			"hideWeapon": false,
+			"weaponAngle": 0,
+			"weaponBack": false,
+			"weaponMirror": false,
+			"weaponX": 0,
+			"weaponY": 0,
+			"width": 64
+		},
+		{
+			"height": 38,
+			"hideWeapon": false,
+			"weaponAngle": 0,
+			"weaponBack": false,
+			"weaponMirror": false,
+			"weaponX": 0,
+			"weaponY": 0,
+			"width": 64
+		},
+		{
+			"height": 38,
+			"hideWeapon": false,
+			"weaponAngle": 0,
+			"weaponBack": false,
+			"weaponMirror": false,
+			"weaponX": 0,
+			"weaponY": 0,
+			"width": 64
+		}
+	],
+	"loop": true
+}

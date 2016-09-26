@@ -1,0 +1,1498 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"endif",
+				"endif"
+			],
+			[
+				"loadMotion",
+				"loadMotionDescriptorClass"
+			],
+			[
+				"Default",
+				"DefaultMotionDescriptor"
+			],
+			[
+				"push",
+				"pushAiWaitIdle"
+			],
+			[
+				"onStatusCancel",
+				"onStatusCancelItemTarget"
+			],
+			[
+				"window",
+				"window"
+			],
+			[
+				"onSkillList",
+				"onSkillListOkConfig"
+			],
+			[
+				"x",
+				"x"
+			],
+			[
+				"Name",
+				"Name"
+			],
+			[
+				"boxwidth",
+				"boxWidth"
+			],
+			[
+				"index",
+				"index"
+			],
+			[
+				"updateAiMag",
+				"updateAiMagicalAction"
+			],
+			[
+				"moveThrough",
+				"moveThroughAlly"
+			],
+			[
+				"skill",
+				"skill"
+			],
+			[
+				"dashThrough",
+				"dashThroughEnemy"
+			],
+			[
+				"value",
+				"values"
+			],
+			[
+				"knockback",
+				"knockback"
+			],
+			[
+				"damagePop",
+				"startDamagePopup"
+			],
+			[
+				"userS",
+				"_userSprite"
+			],
+			[
+				"LMBS",
+				"LMBS_Core"
+			],
+			[
+				"this",
+				"this"
+			],
+			[
+				"get",
+				"getSkillPriority"
+			],
+			[
+				"obj",
+				"obj"
+			],
+			[
+				"Scene_Ba",
+				"Scene_BattleLMBS"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"type",
+				"type"
+			],
+			[
+				"processing",
+				"_processingMotionList"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"p",
+				"prototype"
+			],
+			[
+				"SceneB",
+				"Scene_BattleLMBS"
+			],
+			[
+				"Pr",
+				"prototype"
+			],
+			[
+				"Scene_",
+				"Scene_BattleLMBS"
+			],
+			[
+				"actor",
+				"actor"
+			],
+			[
+				"mot",
+				"_motionData"
+			],
+			[
+				"SceneManager",
+				"SceneManager_requestUpdate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/rpg_scenes.js",
+			"settings":
+			{
+				"buffer_size": 74160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/rpg_managers.js",
+			"settings":
+			{
+				"buffer_size": 73746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/plugins/LinearMotionBattleSystem_Core.js",
+			"settings":
+			{
+				"buffer_size": 211639,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/rpg_objects.js",
+			"settings":
+			{
+				"buffer_size": 286604,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/rpg_core.js",
+			"settings":
+			{
+				"buffer_size": 213973,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 27 files for \"visible\"\n\nD:\\Documents\\RPGMV\\Project1\\js\\rpg_core.js:\n 1668   */\n 1669  Graphics.isVideoPlaying = function() {\n 1670:     return this._video && this._isVideoVisible();\n 1671  };\n 1672  \n ....\n 2281   * @static\n 2282   * @method _updateVisibility\n 2283:  * @param {Boolean} videoVisible\n 2284   * @private\n 2285   */\n 2286: Graphics._updateVisibility = function(videoVisible) {\n 2287:     this._video.style.opacity = videoVisible ? 1 : 0;\n 2288:     this._canvas.style.opacity = videoVisible ? 0 : 1;\n 2289  };\n 2290  \n 2291  /**\n 2292   * @static\n 2293:  * @method _isVideoVisible\n 2294   * @return {Boolean}\n 2295   * @private\n 2296   */\n 2297: Graphics._isVideoVisible = function() {\n 2298      return this._video.style.opacity > 0;\n 2299  };\n ....\n 3883   * The visibility of the sprite.\n 3884   *\n 3885:  * @property visible\n 3886   * @type Boolean\n 3887   */\n ....\n 4463   */\n 4464  Tilemap.prototype._drawTile = function(bitmap, tileId, dx, dy) {\n 4465:     if (Tilemap.isVisibleTile(tileId)) {\n 4466          if (Tilemap.isAutotile(tileId)) {\n 4467              this._drawAutotile(bitmap, tileId, dx, dy);\n ....\n 4752  Tilemap.TILE_ID_MAX    = 8192;\n 4753  \n 4754: Tilemap.isVisibleTile = function(tileId) {\n 4755      return tileId > 0 && tileId < this.TILE_ID_MAX;\n 4756  };\n ....\n 5186   */\n 5187  ShaderTilemap.prototype._drawTile = function(layer, tileId, dx, dy) {\n 5188:     if (Tilemap.isVisibleTile(tileId)) {\n 5189          if (Tilemap.isAutotile(tileId)) {\n 5190              this._drawAutotile(layer, tileId, dx, dy);\n ....\n 5568   * The visibility of the tiling sprite.\n 5569   *\n 5570:  * @property visible\n 5571   * @type Boolean\n 5572   */\n ....\n 5764       * The visibility of the down scroll arrow.\n 5765       *\n 5766:      * @property downArrowVisible\n 5767       * @type Boolean\n 5768       */\n 5769:     this.downArrowVisible = false;\n 5770  \n 5771      /**\n 5772       * The visibility of the up scroll arrow.\n 5773       *\n 5774:      * @property upArrowVisible\n 5775       * @type Boolean\n 5776       */\n 5777:     this.upArrowVisible = false;\n 5778  \n 5779      /**\n ....\n 6276      }\n 6277      this._windowCursorSprite.alpha = cursorOpacity / 255;\n 6278:     this._windowCursorSprite.visible = this.isOpen();\n 6279  };\n 6280  \n ....\n 6288      if (w > 0 && h > 0) {\n 6289          this._windowContentsSprite.setFrame(this.origin.x, this.origin.y, w, h);\n 6290:         this._windowContentsSprite.visible = this.isOpen();\n 6291      } else {\n 6292:         this._windowContentsSprite.visible = false;\n 6293      }\n 6294  };\n ....\n 6299   */\n 6300  Window.prototype._updateArrows = function() {\n 6301:     this._downArrowSprite.visible = this.isOpen() && this.downArrowVisible;\n 6302:     this._upArrowSprite.visible = this.isOpen() && this.upArrowVisible;\n 6303  };\n 6304  \n ....\n 6320      }\n 6321      sprite.setFrame(sx+x*p, sy+y*p, p, p);\n 6322:     sprite.visible = this.isOpen();\n 6323  };\n 6324  \n ....\n 6328   * The visibility of the window.\n 6329   *\n 6330:  * @property visible\n 6331   * @type Boolean\n 6332   */\n ....\n 6494   */\n 6495  WindowLayer.prototype.renderCanvas = function(renderer) {\n 6496:     if (!this.visible || !this.renderable) {\n 6497          return;\n 6498      }\n ....\n 6519      for (var i = 0; i < this.children.length; i++) {\n 6520          var child = this.children[i];\n 6521:         if (child._isWindow && child.visible && child.openness > 0) {\n 6522              this._canvasClearWindowRect(renderer, child);\n 6523              context.save();\n ....\n 6562   */\n 6563  WindowLayer.prototype.renderWebGL = function(renderer) {\n 6564:     if (!this.visible || !this.renderable) {\n 6565          return;\n 6566      }\n ....\n 6573      for (var i = 0; i < this.children.length; i++) {\n 6574          var child = this.children[i];\n 6575:         if (child._isWindow && child.visible && child.openness > 0) {\n 6576              this._maskWindow(child);\n 6577              renderer.maskManager.pushScissorMask(this, this._windowMask);\n ....\n 6986   */\n 6987  ToneSprite.prototype._renderCanvas = function(renderer) {\n 6988:     if (this.visible) {\n 6989          var context = renderer.context;\n 6990          var t = this.worldTransform;\n\nD:\\Documents\\RPGMV\\Project1\\js\\rpg_objects.js:\n 3977  };\n 3978  \n 3979: Game_Actor.prototype.isSpriteVisible = function() {\n 3980      return $gameSystem.isSideView();\n 3981  };\n ....\n 4027  Game_Actor.prototype.performDamage = function() {\n 4028      Game_Battler.prototype.performDamage.call(this);\n 4029:     if (this.isSpriteVisible()) {\n 4030          this.requestMotion('damage');\n 4031      } else {\n ....\n 4353  };\n 4354  \n 4355: Game_Enemy.prototype.isSpriteVisible = function() {\n 4356      return true;\n 4357  };\n ....\n 7997  \n 7998  Game_Follower.prototype.refresh = function() {\n 7999:     var characterName = this.isVisible() ? this.actor().characterName() : '';\n 8000:     var characterIndex = this.isVisible() ? this.actor().characterIndex() : 0;\n 8001      this.setImage(characterName, characterIndex);\n 8002  };\n ....\n 8006  };\n 8007  \n 8008: Game_Follower.prototype.isVisible = function() {\n 8009:     return this.actor() && $gamePlayer.followers().isVisible();\n 8010  };\n 8011  \n ....\n 8044  \n 8045  Game_Followers.prototype.initialize = function() {\n 8046:     this._visible = $dataSystem.optFollowers;\n 8047      this._gathering = false;\n 8048      this._data = [];\n ....\n 8052  };\n 8053  \n 8054: Game_Followers.prototype.isVisible = function() {\n 8055:     return this._visible;\n 8056  };\n 8057  \n 8058  Game_Followers.prototype.show = function() {\n 8059:     this._visible = true;\n 8060  };\n 8061  \n 8062  Game_Followers.prototype.hide = function() {\n 8063:     this._visible = false;\n 8064  };\n 8065  \n ....\n 8131  };\n 8132  \n 8133: Game_Followers.prototype.visibleFollowers = function() {\n 8134      return this._data.filter(function(follower) {\n 8135:         return follower.isVisible();\n 8136      }, this);\n 8137  };\n 8138  \n 8139  Game_Followers.prototype.areMoving = function() {\n 8140:     return this.visibleFollowers().some(function(follower) {\n 8141          return follower.isMoving();\n 8142      }, this);\n ....\n 8144  \n 8145  Game_Followers.prototype.areGathered = function() {\n 8146:     return this.visibleFollowers().every(function(follower) {\n 8147          return !follower.isMoving() && follower.pos($gamePlayer.x, $gamePlayer.y);\n 8148      }, this);\n ....\n 8150  \n 8151  Game_Followers.prototype.isSomeoneCollided = function(x, y) {\n 8152:     return this.visibleFollowers().some(function(follower) {\n 8153          return follower.pos(x, y);\n 8154      }, this);\n\nD:\\Documents\\RPGMV\\Project1\\js\\rpg_scenes.js:\n  677  \n  678  Scene_Map.prototype.snapForBattleBackground = function() {\n  679:     this._windowLayer.visible = false;\n  680      SceneManager.snapForBackground();\n  681:     this._windowLayer.visible = true;\n  682  };\n  683  \n  ...\n 2192  Scene_Battle.prototype.createHelpWindow = function() {\n 2193      this._helpWindow = new Window_Help();\n 2194:     this._helpWindow.visible = false;\n 2195      this.addWindow(this._helpWindow);\n 2196  };\n\nD:\\Documents\\RPGMV\\Project1\\js\\rpg_sprites.js:\n   39  \n   40  Sprite_Base.prototype.updateVisibility = function() {\n   41:     this.visible = !this._hiding;\n   42  };\n   43  \n   ..\n  145      var node = this;\n  146      while (node) {\n  147:         if (!node.visible) {\n  148              return false;\n  149          }\n  ...\n  222      Sprite_Base.prototype.updateVisibility.call(this);\n  223      if (this._character.isTransparent()) {\n  224:         this.visible = false;\n  225      }\n  226  };\n  ...\n  348          this.createHalfBodySprites();\n  349          this._upperBody.bitmap = this.bitmap;\n  350:         this._upperBody.visible = true;\n  351          this._upperBody.y = - this._bushDepth;\n  352          this._lowerBody.bitmap = this.bitmap;\n  353:         this._lowerBody.visible = true;\n  354          this._upperBody.setBlendColor(this.getBlendColor());\n  355          this._lowerBody.setBlendColor(this.getBlendColor());\n  ...\n  357          this._lowerBody.setColorTone(this.getColorTone());\n  358      } else if (this._upperBody) {\n  359:         this._upperBody.visible = false;\n  360:         this._lowerBody.visible = false;\n  361      }\n  362  };\n  ...\n  502  Sprite_Battler.prototype.updateVisibility = function() {\n  503      Sprite_Base.prototype.updateVisibility.call(this);\n  504:     if (!this._battler || !this._battler.isSpriteVisible()) {\n  505:         this.visible = false;\n  506      }\n  507  };\n  508  \n  509  Sprite_Battler.prototype.updateMain = function() {\n  510:     if (this._battler.isSpriteVisible()) {\n  511          this.updateBitmap();\n  512          this.updateFrame();\n  ...\n  580          for (var i = 0; i < this._animationSprites.length; i++) {\n  581              var sprite = this._animationSprites[i];\n  582:             sprite.visible = this._battler.isSpriteVisible();\n  583          }\n  584      }\n  ...\n  587  Sprite_Battler.prototype.setupDamagePopup = function() {\n  588      if (this._battler.isDamagePopupRequested()) {\n  589:         if (this._battler.isSpriteVisible()) {\n  590              var sprite = new Sprite_Damage();\n  591              sprite.x = this.x + this.damageOffsetX();\n  ...\n  742  \n  743  Sprite_Actor.prototype.updateShadow = function() {\n  744:     this._shadowSprite.visible = !!this._actor;\n  745  };\n  746  \n  747  Sprite_Actor.prototype.updateMain = function() {\n  748      Sprite_Battler.prototype.updateMain.call(this);\n  749:     if (this._actor.isSpriteVisible() && !this.isMoving()) {\n  750          this.updateTargetPosition();\n  751      }\n  ...\n 1261              this._screenFlashSprite.y = -this.absoluteY();\n 1262              this._screenFlashSprite.opacity *= (d - 1) / d;\n 1263:             this._screenFlashSprite.visible = (this._screenFlashDuration > 0);\n 1264          }\n 1265      }\n ....\n 1404              this.updateCellSprite(sprite, frame[i]);\n 1405          } else {\n 1406:             sprite.visible = false;\n 1407          }\n 1408      }\n ....\n 1430          sprite.opacity = cell[6];\n 1431          sprite.blendMode = cell[7];\n 1432:         sprite.visible = true;\n 1433      } else {\n 1434:         sprite.visible = false;\n 1435      }\n 1436  };\n ....\n 1919      Sprite.prototype.update.call(this);\n 1920      this.updateBitmap();\n 1921:     if (this.visible) {\n 1922          this.updateOrigin();\n 1923          this.updatePosition();\n ....\n 1936              this.loadBitmap();\n 1937          }\n 1938:         this.visible = true;\n 1939      } else {\n 1940          this._pictureName = '';\n 1941          this.bitmap = null;\n 1942:         this.visible = false;\n 1943      }\n 1944  };\n ....\n 2045  \n 2046  Sprite_Timer.prototype.updateVisibility = function() {\n 2047:     this.visible = $gameTimer.isWorking();\n 2048  };\n 2049  \n ....\n 2071          this.updatePosition();\n 2072          this.updateAnimation();\n 2073:         this.visible = true;\n 2074      } else {\n 2075          this._frameCount = 0;\n 2076:         this.visible = false;\n 2077      }\n 2078  };\n\nD:\\Documents\\RPGMV\\Project1\\js\\rpg_windows.js:\n  156  \n  157  Window_Base.prototype.show = function() {\n  158:     this.visible = true;\n  159  };\n  160  \n  161  Window_Base.prototype.hide = function() {\n  162:     this.visible = false;\n  163  };\n  164  \n  ...\n  645          this.refreshDimmerBitmap();\n  646      }\n  647:     this._dimmerSprite.visible = true;\n  648      this.updateBackgroundDimmer();\n  649  };\n  ...\n  651  Window_Base.prototype.hideBackgroundDimmer = function() {\n  652      if (this._dimmerSprite) {\n  653:         this._dimmerSprite.visible = false;\n  654      }\n  655  };\n  ...\n  787      this._index = index;\n  788      this._stayCount = 0;\n  789:     this.ensureCursorVisible();\n  790      this.updateCursor();\n  791      this.callUpdateHelp();\n  ...\n  985      var topRow = this.topRow();\n  986      var maxTopRow = this.maxTopRow();\n  987:     this.downArrowVisible = maxTopRow > 0 && topRow < maxTopRow;\n  988:     this.upArrowVisible = topRow > 0;\n  989  };\n  990  \n  ...\n 1201          this.setCursorRect(0, 0, this.contents.width, allRowsHeight);\n 1202          this.setTopRow(0);\n 1203:     } else if (this.isCursorVisible()) {\n 1204          var rect = this.itemRect(this.index());\n 1205          this.setCursorRect(rect.x, rect.y, rect.width, rect.height);\n ....\n 1209  };\n 1210  \n 1211: Window_Selectable.prototype.isCursorVisible = function() {\n 1212      var row = this.row();\n 1213      return row >= this.topRow() && row <= this.bottomRow();\n 1214  };\n 1215  \n 1216: Window_Selectable.prototype.ensureCursorVisible = function() {\n 1217      var row = this.row();\n 1218      if (row < this.topRow()) {\n ....\n 1307  \n 1308  Window_Command.prototype.windowHeight = function() {\n 1309:     return this.fittingHeight(this.numVisibleRows());\n 1310  };\n 1311  \n 1312: Window_Command.prototype.numVisibleRows = function() {\n 1313      return Math.ceil(this.maxItems() / this.maxCols());\n 1314  };\n ....\n 1449  };\n 1450  \n 1451: Window_HorzCommand.prototype.numVisibleRows = function() {\n 1452      return 1;\n 1453  };\n ....\n 1574  };\n 1575  \n 1576: Window_MenuCommand.prototype.numVisibleRows = function() {\n 1577      return this.maxItems();\n 1578  };\n ....\n 1718  Window_MenuStatus.prototype.itemHeight = function() {\n 1719      var clientHeight = this.height - this.padding * 2;\n 1720:     return Math.floor(clientHeight / this.numVisibleRows());\n 1721  };\n 1722  \n 1723: Window_MenuStatus.prototype.numVisibleRows = function() {\n 1724      return 4;\n 1725  };\n ....\n 2040  };\n 2041  \n 2042: Window_SkillType.prototype.numVisibleRows = function() {\n 2043      return 4;\n 2044  };\n ....\n 2261  \n 2262  Window_EquipStatus.prototype.windowHeight = function() {\n 2263:     return this.fittingHeight(this.numVisibleRows());\n 2264  };\n 2265  \n 2266: Window_EquipStatus.prototype.numVisibleRows = function() {\n 2267      return 7;\n 2268  };\n ....\n 2655  \n 2656  Window_Options.prototype.windowHeight = function() {\n 2657:     return this.fittingHeight(Math.min(this.numVisibleRows(), 12));\n 2658  };\n 2659  \n ....\n 2805  };\n 2806  \n 2807: Window_SavefileList.prototype.maxVisibleItems = function() {\n 2808      return 5;\n 2809  };\n ....\n 2811  Window_SavefileList.prototype.itemHeight = function() {\n 2812      var innerHeight = this.height - this.padding * 2;\n 2813:     return Math.floor(innerHeight / this.maxVisibleItems());\n 2814  };\n 2815  \n ....\n 3089          button.setColdFrame(x, 0, w, buttonHeight);\n 3090          button.setHotFrame(x, buttonHeight, w, buttonHeight);\n 3091:         button.visible = false;\n 3092          this._buttons.push(button);\n 3093          this.addChild(button);\n ....\n 3126  Window_ShopNumber.prototype.showButtons = function() {\n 3127      for (var i = 0; i < this._buttons.length; i++) {\n 3128:         this._buttons[i].visible = true;\n 3129      }\n 3130  };\n ....\n 3132  Window_ShopNumber.prototype.hideButtons = function() {\n 3133      for (var i = 0; i < this._buttons.length; i++) {\n 3134:         this._buttons[i].visible = false;\n 3135      }\n 3136  };\n ....\n 3383  \n 3384  Window_ShopStatus.prototype.isPageChangeEnabled = function() {\n 3385:     return this.visible && this.maxPages() >= 2;\n 3386  };\n 3387  \n ....\n 3874  };\n 3875  \n 3876: Window_ChoiceList.prototype.numVisibleRows = function() {\n 3877      var messageY = this._messageWindow.y;\n 3878      var messageHeight = this._messageWindow.height;\n ....\n 4027          button.setColdFrame(x, 0, w, buttonHeight);\n 4028          button.setHotFrame(x, buttonHeight, w, buttonHeight);\n 4029:         button.visible = false;\n 4030          this._buttons.push(button);\n 4031          this.addChild(button);\n ....\n 4062  Window_NumberInput.prototype.showButtons = function() {\n 4063      for (var i = 0; i < this._buttons.length; i++) {\n 4064:         this._buttons[i].visible = true;\n 4065      }\n 4066  };\n ....\n 4068  Window_NumberInput.prototype.hideButtons = function() {\n 4069      for (var i = 0; i < this._buttons.length; i++) {\n 4070:         this._buttons[i].visible = false;\n 4071      }\n 4072  };\n ....\n 4182  \n 4183  Window_EventItem.prototype.windowHeight = function() {\n 4184:     return this.fittingHeight(this.numVisibleRows());\n 4185  };\n 4186  \n 4187: Window_EventItem.prototype.numVisibleRows = function() {\n 4188      return 4;\n 4189  };\n ....\n 4279  \n 4280  Window_Message.prototype.windowHeight = function() {\n 4281:     return this.fittingHeight(this.numVisibleRows());\n 4282  };\n 4283  \n ....\n 4288  };\n 4289  \n 4290: Window_Message.prototype.numVisibleRows = function() {\n 4291      return 4;\n 4292  };\n ....\n 5330  };\n 5331  \n 5332: Window_PartyCommand.prototype.numVisibleRows = function() {\n 5333      return 4;\n 5334  };\n ....\n 5372  };\n 5373  \n 5374: Window_ActorCommand.prototype.numVisibleRows = function() {\n 5375      return 4;\n 5376  };\n ....\n 5470  \n 5471  Window_BattleStatus.prototype.windowHeight = function() {\n 5472:     return this.fittingHeight(this.numVisibleRows());\n 5473  };\n 5474  \n 5475: Window_BattleStatus.prototype.numVisibleRows = function() {\n 5476      return 4;\n 5477  };\n ....\n 5598  \n 5599  Window_BattleEnemy.prototype.windowHeight = function() {\n 5600:     return this.fittingHeight(this.numVisibleRows());\n 5601  };\n 5602  \n 5603: Window_BattleEnemy.prototype.numVisibleRows = function() {\n 5604      return 4;\n 5605  };\n\nD:\\Documents\\RPGMV\\Project1\\js\\libs\\pixi-tilemap.js:\n  212      this.z = this.zIndex = zIndex;\n  213      this.pointsBuf = [];\n  214:     this.visible = false;\n  215      this._tempSize = new Float32Array([0, 0]);\n  216      this._tempTexSize = 1;\n\nD:\\Documents\\RPGMV\\Project1\\js\\libs\\pixi.js:\n 8640  AccessibilityManager.prototype.updateAccessibleObjects = function(displayObject)\n 8641  {\n 8642: \tif(!displayObject.visible)\n 8643  \t{\n 8644  \t\treturn;\n ....\n 9985      this._currentBounds = null;\n 9986  \n 9987:     if (!this.visible)\n 9988      {\n 9989          return;\n ....\n 10012      // if we have already done this on THIS frame.\n 10013  \n 10014:     if(!this.visible)\n 10015      {\n 10016          return;\n .....\n 10043  {\n 10044  \n 10045:     // if the object is not visible or the alpha is 0 then no need to render this element\n 10046:     if (!this.visible || this.worldAlpha <= 0 || !this.renderable)\n 10047      {\n 10048  \n .....\n 10135  Container.prototype.renderCanvas = function (renderer)\n 10136  {\n 10137:     // if not visible or the alpha is 0 then no need to render this\n 10138:     if (!this.visible || this.alpha <= 0 || !this.renderable)\n 10139      {\n 10140          return;\n .....\n 10228       * @member {boolean}\n 10229       */\n 10230:     this.visible = true;\n 10231  \n 10232      /**\n .....\n 10445  \n 10446      /**\n 10447:      * Indicates if the sprite is globally visible.\n 10448       *\n 10449       * @member {boolean}\n .....\n 10451       * @readonly\n 10452       */\n 10453:     worldVisible: {\n 10454          get: function ()\n 10455          {\n .....\n 10457  \n 10458              do {\n 10459:                 if (!item.visible)\n 10460                  {\n 10461                      return false;\n .....\n 11864  Graphics.prototype._renderWebGL = function (renderer)\n 11865  {\n 11866:     // if the sprite is not visible or the alpha is 0 then no need to render this element\n 11867  \n 11868      if (this.glDirty)\n .....\n 26335  DisplayObject.prototype._renderCachedWebGL = function (renderer)\n 26336  {\n 26337:     if (!this.visible || this.worldAlpha <= 0 || !this.renderable)\n 26338      {\n 26339          return;\n .....\n 26435  DisplayObject.prototype._renderCachedCanvas = function (renderer)\n 26436  {\n 26437:     if (!this.visible || this.worldAlpha <= 0 || !this.renderable)\n 26438      {\n 26439          return;\n .....\n 28412  InteractionManager.prototype.processInteractive = function (point, displayObject, func, hitTest, interactive)\n 28413  {\n 28414:     if(!displayObject || !displayObject.visible)\n 28415      {\n 28416          return false;\n .....\n 30859  ParticleContainer.prototype.renderWebGL = function (renderer)\n 30860  {\n 30861:     if (!this.visible || this.worldAlpha <= 0 || !this.children.length || !this.renderable)\n 30862      {\n 30863          return;\n .....\n 30902  ParticleContainer.prototype.renderCanvas = function (renderer)\n 30903  {\n 30904:     if (!this.visible || this.worldAlpha <= 0 || !this.children.length || !this.renderable)\n 30905      {\n 30906          return;\n .....\n 30931          var child = this.children[i];\n 30932  \n 30933:         if (!child.visible)\n 30934          {\n 30935              continue;\n\nD:\\Documents\\RPGMV\\Project1\\js\\plugins\\AltMenuScreen.js:\n   35      };\n   36  \n   37:     Window_MenuCommand.prototype.numVisibleRows = function() {\n   38          return 2;\n   39      };\n   ..\n   53      };\n   54  \n   55:     Window_MenuStatus.prototype.numVisibleRows = function() {\n   56          return 1;\n   57      };\n\nD:\\Documents\\RPGMV\\Project1\\js\\plugins\\AltSaveScreen.js:\n   37      Scene_File.prototype.start = function() {\n   38          _Scene_File_start.call(this);\n   39:         this._listWindow.ensureCursorVisible();\n   40          this._listWindow.callUpdateHelp();\n   41      };\n   ..\n   49      };\n   50  \n   51:     Window_SavefileList.prototype.numVisibleRows = function() {\n   52          return 5;\n   53      };\n\nD:\\Documents\\RPGMV\\Project1\\js\\plugins\\LinearMotionBattleSystem_Core.js:\n 3862  };\n 3863  \n 3864: Window_SkillConfig.prototype.numVisibleRows = function() {\n 3865      return Kien.LMBS_Core.skillSetRightLeft ? 4 : 5;\n 3866  };\n ....\n 4458          this.updateCollapse();\n 4459          if(this._effectDuration == 0){\n 4460:             this.visible = false;\n 4461          }\n 4462      }\n ....\n 4507      this._animationCount = 0;\n 4508      this._hit = false;\n 4509:     this.visible = false;\n 4510      this.updateBitmap();\n 4511      this.x = sprite._battler.screenX();\n ....\n 4514      this.anchor.x = 0.5;\n 4515      this.anchor.y = 1;\n 4516:     this.visible = true;\n 4517      this._battler = sprite._battler;\n 4518      this._direction = (this._battler._facing ? 1 : -1);\n ....\n 4547          this.y -= this._yspeed; \n 4548          if(this.outOfBound()){\n 4549:             this.visible = false;\n 4550              this._finish = true;\n 4551          }\n ....\n 4580          }, this);\n 4581          if(this._hit){\n 4582:             this.visible = false;\n 4583              this._finish = true;\n 4584          }\n ....\n 4682          sprite.opacity = cell[6];\n 4683          sprite.blendMode = cell[7];\n 4684:         sprite.visible = this._target.visible;\n 4685      } else {\n 4686:         sprite.visible = false;\n 4687      }\n 4688  };\n ....\n 4896      sprite.x = x;\n 4897      sprite.y = y;\n 4898:     sprite.visible = true;\n 4899      sprite.bitmap.drawText(string,0,0,width,height);\n 4900      this.parent.addChild(sprite);\n ....\n 4911      valueSprite.moveTargetX = x;\n 4912      valueSprite.moveCount = 20;\n 4913:     valueSprite.visible = true;\n 4914      this.parent.addChild(valueSprite);\n 4915      this.sprites.push(valueSprite);\n ....\n 4995      for (var i = 0 ; i < this.sprites.length ; i++){\n 4996          var sprite = this.sprites[i];\n 4997:         sprite.visible = true;\n 4998          if (sprite.waitCount && sprite.waitCount > 0) {\n 4999              sprite.waitCount--;\n ....\n 5061      if (this._prop) {\n 5062          this.updateAngle();\n 5063:         this.updateVisible();\n 5064      }\n 5065  }\n ....\n 5069  }\n 5070  \n 5071: Sprite_WeaponLMBS.prototype.updateVisible = function() {\n 5072      \n 5073  }\n\n152 matches across 10 files\n",
+			"settings":
+			{
+				"buffer_size": 23626,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: remo",
+		"selected_items":
+		[
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Git",
+				"Git: Init"
+			],
+			[
+				"Git:",
+				"Git: Init"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Bookmarks: Select Next"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Documents/RPGMV/Project1/js",
+		"/D/Documents/RPGMV/Project1/js/libs",
+		"/D/Documents/RPGMV/Project1/js/plugins"
+	],
+	"file_history":
+	[
+		"/D/Documents/RPGMV/Project1/img/weapons/sword.json",
+		"/D/Documents/RPGMV/Project1/img/sv_actors/Actor1_1/Sleep.json",
+		"/D/Documents/RPGMV/Project1/img/sv_actors/Actor2_1/Walk.json",
+		"/D/Documents/RPGMV/Project1/img/sv_actors/Actor2_1/Cast.json",
+		"/D/Documents/RPGVXAce/STG测试/Game.ini",
+		"/D/Documents/RPGVXAce/STG测试/Game.rvproj2",
+		"/D/Documents/RPGMV/Project1/js/rpg_sprites.js",
+		"/D/Documents/RPGMV/Project1/js/libs/pixi.js",
+		"/D/Documents/RPGMV/Project1/js/rpg_core.js",
+		"/D/Documents/RPGMV/Project1/img/sv_actors/Actor1_1/Thrust.json",
+		"/D/Documents/RPGMV/Project1/img/sv_actors/Actor1_1/Cast.json",
+		"/D/Documents/RPGMV/Project1/data/animations/this.json",
+		"/D/Documents/RPGMV/Project1/data/motions/test.json",
+		"/D/Documents/RPGMV/Project1/data/motions/test2.json",
+		"/D/Documents/RPGMV/Project1/data/animations/ExampleAnimationDescriptor.json",
+		"/D/Downloads/YEP_BattleEngineCore.js",
+		"/D/Documents/RPGMV/Project1/js/plugins/LinearMotionBattleSystem_Core.js",
+		"/C/Users/Kien-PC/Desktop/desktop.ini",
+		"/D/Documents/RPGMV/Project1/js/rpg_scenes.js",
+		"/D/Documents/RPGMV/Project1/js/rpg_objects.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/NewData/js/plugins.js",
+		"/D/Documents/RPGMV/Project1/js/rpg_windows.js",
+		"/D/Documents/RPGMV/Project1/js/rpg_managers.js",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/config/Mekanism.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/config/agricraft/Configuration.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/config/ImmersiveEngineering.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/config/agricraft/CustomCrops.txt",
+		"/D/Documents/My Games/Terraria/ModLoader/Mod Sources/ExtendedInventories/ExtendedInventory.csproj",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/logs/fml-client-latest.log",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/logs/fml-client-2.log",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/logs/fml-client-1.log",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone 2 Reloaded/logs/latest.log",
+		"/D/Games/Tales of Zestiria/steam_api.ini",
+		"/D/Games/Tales of Zestiria/3DMGAME.ini",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/NewData/data/Enemies.json",
+		"/D/Documents/RPGMV/Project1/data/Animations.json",
+		"/D/Documents/RPGMV/Project1/js/plugins/NoResizable.js",
+		"/D/91UserData/Document/91 WireLess/91Mobile/Logs/UNBREAKER/save.ini",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/TechReborn.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/EnchantChanger.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/eplus.cfg",
+		"/D/Documents/GitHub/LMBS-MV/ExampleAnimationDescriptor.json",
+		"/D/Documents/RPGMV/Project1/data/motions/skill3.json",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/BattleVoice.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/OverpassTile.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/Foreground.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/BattlebackScroll.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/EventSelector.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/OuterSelfSwitch.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/KadokawaPlugins/EscapeDungeon.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/RPGmakerWeb_plugins/Yanfly/--------------------.js",
+		"/D/Documents/RPGMV/Project2/js/rpg_core.js",
+		"/D/Documents/RPGMV/Project1/data/Items.json",
+		"/D/Documents/RPGMV/Project1/js/plugins/YEP_CoreEngine.js",
+		"/C/Games/Curse/Minecraft/Instances/Material Energy^Natural Capital/config/agricraft/Configuration.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/veinminer/tools-and-blocks.json",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/veinminer/modSupport.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Play With Clay/config/denseores.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Arisen 2/logs/fml-client-3.log",
+		"/C/Games/Curse/Minecraft/Instances/Arisen 2/logs/fml-client-latest.log",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/GregTech/GregTech.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Arisen 2/config/veinminer/general.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Arisen 2/config/veinminer/modSupport.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Arisen 2/config/veinminer/tools-and-blocks.json",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/scripts/thaumcraft.zs",
+		"/C/Users/Kien-PC/AppData/Local/Temp/7zOC31A86A0/MANIFEST.MF",
+		"/D/Documents/java/MusicTest/release/log",
+		"/C/Games/Curse/Minecraft/Instances/TolkienCraft II/config/aroma1997/AromaBackup.cfg",
+		"/D/Recording n editing/Aviutil/aviutl.ini",
+		"/C/Games/Curse/Minecraft/Instances/Arisen/logs/fml-client-latest.log",
+		"/D/Documents/java/MusicTest/res/logger.property",
+		"/C/Games/Curse/Minecraft/Instances/Arisen/logs/fml-client-1.log",
+		"/C/Riot Games/League of Legends/Config/input.ini",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/GregTech/WorldGeneration.cfg",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/scripts/vanilla.zs",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/ProjectRed.cfg",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/GregTech/Other.cfg",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/CodeChickenCore.cfg",
+		"/C/Games/Curse/Minecraft/Instances/InfiTech 2/config/HungerOverhaul/HungerOverhaul.cfg",
+		"/C/Riot Games/League of Legends/Config/PersistedSettings.json",
+		"/D/Documents/RPGMV/Resources/Stripper/nw.pak",
+		"/D/Documents/RPGMV/Project1/js/plugins.js",
+		"/D/Documents/RPGMV/Project1/data/motions/CommonItem.json",
+		"/D/Documents/GitHub/LMBS/LinearMotionBattleSystem_Core.js",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/config/AppliedEnergistics2/AppliedEnergistics2.cfg",
+		"/C/Users/Kien-PC/AppData/Local/Temp/7zO4210B7E7/Items.json",
+		"/C/Users/Kien-PC/AppData/Local/Temp/7zO421415F7/Items.json",
+		"/C/Users/Kien-PC/AppData/Local/Temp/7zO4219CDC7/Enemies.json",
+		"/D/Documents/Tencent Files/1157328778/FileRecv/Cutscene Skip.txt",
+		"/D/Documents/Visual Studio 2012/Projects/Block Tension/Block Tension/Block Tension.cpp",
+		"/D/Downloads/cookienew/121.668 quadrillion cookies - Cookie Clicker_files/main.js",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/resourcepacks/pack.mcmeta",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/config/Mekanism.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/config/veinminer/tools-and-blocks.json",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/config/veinminer/modSupport.cfg",
+		"/C/Games/Curse/Minecraft/Instances/Project Ozone (1)/config/veinminer/general.cfg",
+		"/D/Documents/RPGMV/Project1/js/plugins/TimerRefreshRate.js",
+		"/C/Games/Curse/Minecraft/Install/launcher_profiles.json",
+		"/C/Riot Games/League of Legends/RADS/system/locale.cfg",
+		"/D/Pictures/test.gif",
+		"/C/Riot Games/League of Legends/Config/game.cfg",
+		"/D/Documents/RPGMV/Resources/JS/MirrorAnimationFix.js",
+		"/D/Documents/RPGMV/huer's day/js/plugins/EventPassableOverride.js",
+		"/D/Documents/RPGMV/Project1/js/plugins/TilemapAutoFit.js",
+		"/D/Documents/RPGMV/huer's day/js/plugins/WeaponSkill.js",
+		"/D/Documents/RPGMV/Resources/JS/TimerRefreshRate.js",
+		"/D/Documents/RPGMV/Resources/img/usui/usui.rb",
+		"/D/Documents/RPGMV/Resources/Stripper/credits.html",
+		"/D/Tools/goagent/checkip.py",
+		"/D/迅雷下载/Yu-Gi-Oh_ARC-V_Tag_Force_SPECIAL_JPN.zip.td.cfg",
+		"/D/Documents/RPGMV/Project1/data/Actors.json",
+		"/D/Documents/RPGMV/Project1/js/main.js",
+		"/D/Documents/RPGMV/Project1/js/plugins/SpriteZValue.js",
+		"/C/Games/EasyUnofficialGreg/config/GregTech/GregTech.cfg",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/RPGmakerWeb_plugins/Zalerinian/Gamefocus.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/RPGmakerWeb_plugins/Yanfly/YEP_X_ActSeqPack3.js",
+		"/D/Documents/Games/GS-PhantomLord/js/plugins/YEP_BattleEngineCore.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/RPGmakerWeb_plugins/Yanfly/YEP_X_ActSeqPack1.js",
+		"/D/Games/SteamLibrary/steamapps/common/RPG Maker MV/dlc/RPGmakerWeb_plugins/Yanfly/YEP_ItemCore.js",
+		"/D/Documents/Games/Project1/js/rpg_sprites.js",
+		"/D/Documents/Games/Project1/js/main.js",
+		"/D/Documents/Games/Project1/js/plugins/NoResizable.js",
+		"/C/Games/Curse/Minecraft/Instances/Rotary/config/machinemuse/recipes/mps-thermalexpansion.recipes",
+		"/D/Documents/Games/Project1/js/rpg_core.js",
+		"/D/Documents/Games/Project1/js/plugins/JumpGap.js",
+		"/D/Documents/Games/Project1/js/plugins/TimerRefreshRate.js",
+		"/D/Documents/Games/Project1/js/plugins/ScreenResolution.js",
+		"/D/Documents/Games/Project1/js/plugins/YEP_CoreEngine.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"D:\\Documents\\GitHub\\LMBS",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"<current file>",
+			"",
+			"D:\\Documents\\RPGMV\\Project1\\js\\plugins",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"visible",
+			"_rotation",
+			"ImageManager.load",
+			"ImageManaer.load",
+			"addChild",
+			"_renderCanvas",
+			"_render",
+			"render",
+			"children",
+			"Sprite_StateOverlay",
+			"Sprite_Weapon",
+			".meta",
+			"meta.",
+			"JSON.parse",
+			"Image",
+			"Image.pro",
+			"Image",
+			"printError",
+			"checkError",
+			"Uncaught",
+			"boxWidth",
+			"currentBitmapCache",
+			"_cachedBitmaps[",
+			"_cache",
+			"rotation",
+			"onSelect",
+			"needsSelection",
+			"selection",
+			"forceSelec",
+			"onSelectAction",
+			"onSkill",
+			"rotateHue",
+			"Window",
+			"contains",
+			"$dataMap.data",
+			"checkPassage",
+			"loadMapData",
+			"$dataMap",
+			"prototype.data",
+			"Tilemap",
+			"Spriteset_Map",
+			"$dataMap",
+			"_cachedBitmapNames",
+			"script",
+			"Decrypter",
+			"load",
+			"loadNormalBitmap",
+			"CacheMap",
+			"ImageManager",
+			"genera",
+			"ratio",
+			"gene",
+			"grow",
+			".setItem",
+			".setObject",
+			"setObject",
+			"mutation",
+			"weed",
+			"Sprite_Animation",
+			"rotateHue",
+			"parseInt",
+			"knockdir",
+			"rects",
+			"BLEND_MODES.SCREEN",
+			"'screen'",
+			"SCREEN",
+			"blendModes.SCREEN",
+			"SCREEN",
+			"BLEND_SCREEN",
+			"blendMode",
+			".",
+			"updateEvent",
+			"isHit",
+			"rf",
+			"endif",
+			"JSON.parse",
+			"pushMask",
+			"maskManager",
+			"._mask =",
+			"this._mask =",
+			"this._mask=",
+			"this._mask",
+			"this._mast",
+			"_renderCanvas",
+			"_mask",
+			"_render",
+			"indexOf",
+			"Game_Enemy.prototype.index",
+			"index",
+			"isForce",
+			"friendsUnit",
+			"Loop",
+			"forEach",
+			"friendsUnit",
+			"friends",
+			"friendUnit",
+			"updateAi",
+			"evade",
+			"knockback",
+			"isActable",
+			"playBattleBgm",
+			"AudioManager.play",
+			"useRegistedSkill",
+			"endMotion",
+			"console",
+			"NoFall",
+			"isItem",
+			"isGround",
+			"meta",
+			"useSkill",
+			"_motionFall",
+			"noFall",
+			"loop",
+			"regexp",
+			"moveWith",
+			"zoomX",
+			"getSkillPriority",
+			"Priority",
+			"priority",
+			"isItem",
+			"paySkillCost",
+			"typeof",
+			"updateMotion",
+			"match",
+			"motionList",
+			"createMotionListFromNote",
+			"motionWaiting",
+			"dispose"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"_lastBattleActorIndexLMBS",
+			"Game_LMBSAiCertainAction",
+			"this._aiData.actionType",
+			"Game_LMBSAiActorChainSkill",
+			"Game_LMBSAiActorPhysicalAction",
+			"Game_LMBSAiActorMagicAction",
+			"list",
+			"Kien.gifReader.bitsToNum",
+			"Kien.gifReader.byteToBitArr",
+			"Spriteset_BattleLMBS",
+			"Sprite_ProjectileLMBS",
+			"this",
+			"LMBS_Core"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/rpg_scenes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 74160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3292,
+								3292
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1745.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/rpg_managers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 73746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23511,
+								23511
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/plugins/LinearMotionBattleSystem_Core.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 211639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								44214,
+								44214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15223.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/rpg_objects.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 286604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159726,
+								159726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 50904.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/rpg_core.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 213973,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94696,
+								94696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57853.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23626,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										181,
+										188
+									],
+									[
+										302,
+										309
+									],
+									[
+										390,
+										397
+									],
+									[
+										445,
+										452
+									],
+									[
+										507,
+										514
+									],
+									[
+										597,
+										604
+									],
+									[
+										687,
+										694
+									],
+									[
+										845,
+										852
+									],
+									[
+										1002,
+										1009
+									],
+									[
+										1206,
+										1213
+									],
+									[
+										1427,
+										1434
+									],
+									[
+										1644,
+										1651
+									],
+									[
+										1795,
+										1802
+									],
+									[
+										1871,
+										1878
+									],
+									[
+										2009,
+										2016
+									],
+									[
+										2083,
+										2090
+									],
+									[
+										2243,
+										2250
+									],
+									[
+										2455,
+										2462
+									],
+									[
+										2542,
+										2549
+									],
+									[
+										2685,
+										2692
+									],
+									[
+										2726,
+										2733
+									],
+									[
+										2766,
+										2773
+									],
+									[
+										2805,
+										2812
+									],
+									[
+										2919,
+										2926
+									],
+									[
+										3038,
+										3045
+									],
+									[
+										3184,
+										3191
+									],
+									[
+										3406,
+										3413
+									],
+									[
+										3641,
+										3648
+									],
+									[
+										3863,
+										3870
+									],
+									[
+										4123,
+										4130
+									],
+									[
+										4327,
+										4334
+									],
+									[
+										4555,
+										4562
+									],
+									[
+										4693,
+										4700
+									],
+									[
+										4856,
+										4863
+									],
+									[
+										4942,
+										4949
+									],
+									[
+										5113,
+										5120
+									],
+									[
+										5196,
+										5203
+									],
+									[
+										5314,
+										5321
+									],
+									[
+										5472,
+										5479
+									],
+									[
+										5519,
+										5526
+									],
+									[
+										5615,
+										5622
+									],
+									[
+										5718,
+										5725
+									],
+									[
+										5809,
+										5816
+									],
+									[
+										5931,
+										5938
+									],
+									[
+										6061,
+										6068
+									],
+									[
+										6266,
+										6273
+									],
+									[
+										6529,
+										6536
+									],
+									[
+										6787,
+										6794
+									],
+									[
+										6878,
+										6885
+									],
+									[
+										7057,
+										7064
+									],
+									[
+										7262,
+										7269
+									],
+									[
+										7390,
+										7397
+									],
+									[
+										7589,
+										7596
+									],
+									[
+										7764,
+										7771
+									],
+									[
+										7918,
+										7925
+									],
+									[
+										8214,
+										8221
+									],
+									[
+										8262,
+										8269
+									],
+									[
+										8490,
+										8497
+									],
+									[
+										8523,
+										8530
+									],
+									[
+										8666,
+										8673
+									],
+									[
+										8914,
+										8921
+									],
+									[
+										8946,
+										8953
+									],
+									[
+										9155,
+										9162
+									],
+									[
+										9384,
+										9391
+									],
+									[
+										9577,
+										9584
+									],
+									[
+										9849,
+										9856
+									],
+									[
+										10038,
+										10045
+									],
+									[
+										10197,
+										10204
+									],
+									[
+										10255,
+										10262
+									],
+									[
+										10400,
+										10407
+									],
+									[
+										10566,
+										10573
+									],
+									[
+										10696,
+										10703
+									],
+									[
+										10828,
+										10835
+									],
+									[
+										10983,
+										10990
+									],
+									[
+										11076,
+										11083
+									],
+									[
+										11237,
+										11244
+									],
+									[
+										11336,
+										11343
+									],
+									[
+										11463,
+										11470
+									],
+									[
+										11673,
+										11680
+									],
+									[
+										11811,
+										11818
+									],
+									[
+										12003,
+										12010
+									],
+									[
+										12073,
+										12080
+									],
+									[
+										12265,
+										12272
+									],
+									[
+										12476,
+										12483
+									],
+									[
+										12664,
+										12671
+									],
+									[
+										12877,
+										12884
+									],
+									[
+										12946,
+										12953
+									],
+									[
+										13109,
+										13116
+									],
+									[
+										13230,
+										13237
+									],
+									[
+										13483,
+										13490
+									],
+									[
+										13555,
+										13562
+									],
+									[
+										13674,
+										13681
+									],
+									[
+										13855,
+										13862
+									],
+									[
+										13928,
+										13935
+									],
+									[
+										14114,
+										14121
+									],
+									[
+										14217,
+										14224
+									],
+									[
+										14457,
+										14464
+									],
+									[
+										14648,
+										14655
+									],
+									[
+										14906,
+										14913
+									],
+									[
+										15105,
+										15112
+									],
+									[
+										15252,
+										15259
+									],
+									[
+										15365,
+										15372
+									],
+									[
+										15656,
+										15663
+									],
+									[
+										15915,
+										15922
+									],
+									[
+										16115,
+										16122
+									],
+									[
+										16276,
+										16283
+									],
+									[
+										16347,
+										16354
+									],
+									[
+										16524,
+										16531
+									],
+									[
+										16617,
+										16624
+									],
+									[
+										16739,
+										16746
+									],
+									[
+										16861,
+										16868
+									],
+									[
+										17043,
+										17050
+									],
+									[
+										17117,
+										17124
+									],
+									[
+										17298,
+										17305
+									],
+									[
+										17371,
+										17378
+									],
+									[
+										17573,
+										17580
+									],
+									[
+										17847,
+										17854
+									],
+									[
+										17957,
+										17964
+									],
+									[
+										18097,
+										18104
+									],
+									[
+										18206,
+										18213
+									],
+									[
+										18290,
+										18297
+									],
+									[
+										18468,
+										18475
+									],
+									[
+										18544,
+										18551
+									],
+									[
+										18703,
+										18710
+									],
+									[
+										18827,
+										18834
+									],
+									[
+										18949,
+										18956
+									],
+									[
+										19086,
+										19093
+									],
+									[
+										19278,
+										19285
+									],
+									[
+										19491,
+										19498
+									],
+									[
+										19695,
+										19702
+									],
+									[
+										19969,
+										19976
+									],
+									[
+										20131,
+										20138
+									],
+									[
+										20357,
+										20364
+									],
+									[
+										20562,
+										20569
+									],
+									[
+										20742,
+										20749
+									],
+									[
+										20878,
+										20885
+									],
+									[
+										21144,
+										21151
+									],
+									[
+										21291,
+										21298
+									],
+									[
+										21488,
+										21495
+									],
+									[
+										21699,
+										21706
+									],
+									[
+										21835,
+										21842
+									],
+									[
+										22015,
+										22022
+									],
+									[
+										22246,
+										22253
+									],
+									[
+										22405,
+										22412
+									],
+									[
+										22591,
+										22598
+									],
+									[
+										22614,
+										22621
+									],
+									[
+										22665,
+										22672
+									],
+									[
+										22779,
+										22786
+									],
+									[
+										23004,
+										23011
+									],
+									[
+										23242,
+										23249
+									],
+									[
+										23456,
+										23463
+									],
+									[
+										23553,
+										23560
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								849,
+								849
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 94.0
+	},
+	"pinned_build_system": "",
+	"project": "project1.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\Documents\\RPGMV\\Project2\\project2.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 35.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"updatePop",
+				"updateDamagePopup"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 134.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,115 @@
+{
+	"2": [
+		{
+			"damagePer": 0.6,
+			"dur": 3,
+			"knockback": {
+				"x": 0.0,
+				"y": 3.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 80.0,
+				"width": 60.0,
+				"x": -30.0,
+				"y": -80.0
+			}
+		}
+	],
+	"5": [
+		{
+			"damagePer": 0.6,
+			"dur": 3,
+			"knockback": {
+				"x": 0.0,
+				"y": 3.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 80.0,
+				"width": 60.0,
+				"x": -30.0,
+				"y": -80.0
+			}
+		}
+	],
+	"8": [
+		{
+			"damagePer": 1.8,
+			"dur": 3,
+			"knockback": {
+				"x": 5.0,
+				"y": 8.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 80.0,
+				"width": 60.0,
+				"x": -30.0,
+				"y": -80.0
+			}
+		}
+	],
+	"0": [
+		{
+			"damagePer": 0.0,
+			"dur": 0,
+			"knockback": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 0.0,
+				"width": 0.0,
+				"x": 0.0,
+				"y": 0.0
+			}
+		},
+		{
+			"damagePer": 0.0,
+			"dur": 0,
+			"knockback": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 0.0,
+				"width": 0.0,
+				"x": 0.0,
+				"y": 0.0
+			}
+		},
+		{
+			"damagePer": 0.0,
+			"dur": 0,
+			"knockback": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 0.0,
+				"width": 0.0,
+				"x": 0.0,
+				"y": 0.0
+			}
+		},
+		{
+			"damagePer": 0.0,
+			"dur": 0,
+			"knockback": {
+				"x": 0.0,
+				"y": 0.0
+			},
+			"knockdir": 0,
+			"rect": {
+				"height": 0.0,
+				"width": 0.0,
+				"x": 0.0,
+				"y": 0.0
+			}
+		}
+	]
+}
